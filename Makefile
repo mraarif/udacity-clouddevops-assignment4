@@ -11,10 +11,8 @@ setup:
 	python3 -m venv ~/.devops
 
 install:
-	# installing hadolint
-	wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-    	chmod +x /bin/hadolint
-
+	chmod +x ./install_hadolint.sh
+	./install_hadolint.sh
 	# This should be run from inside a virtualenv
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
