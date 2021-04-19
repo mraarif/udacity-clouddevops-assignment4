@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://circleci.com/gh/mraarif/udacity-clouddevops-assignment4/tree/main.svg?style=svg)](https://circleci.com/gh/mraarif/udacity-clouddevops-assignment4/?branch=main)
 
 ## Project Overview
 
@@ -40,3 +40,27 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+```
+>>> dockerpath=mraarif/flask-ml-microservice:latest
+
+>>> kubectl run flaskmicroservice\
+        --generator=run-pod/v1\
+        --image=$dockerpath\
+        --port=80 --labels app=flaskmicroservice
+```
+
+## Directory Structure
+
+| Directory/File | Description |
+| ---- | ----------- |
+| `.circleci/config.yml` | CircleCI configuration |
+| `model_data` | Trained model data for housing prices in Boston |
+| `output_txt_files` | Docker and Kubernetes log output |
+| `app.py` | REST Endpoint for predicting housing prices in Boston |
+| `Dockerfile` | Dockerfile containing the application and its dependencies |
+| `make_prediction.sh` | Calls prediction REST endpoint and simulates sample prediction |
+| `Makefile` | Build file of the project |
+| `requirements.txt` | Python requirements |
+| `run_docker.sh` | Shell script for creating and running docker container |
+| `run_kubernetes.sh` | Shell script to deploy docker container on Kubernetes cluster |
+| `upload_docker.sh` | Shell script for uploading locally built docker image to dockerhub repository |
