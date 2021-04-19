@@ -13,7 +13,7 @@ setup:
 install:
 	# installing hadolint
 	wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-    	sudo chmod +x /bin/hadolint
+    	chmod +x /bin/hadolint
 
 	# This should be run from inside a virtualenv
 	pip install --upgrade pip &&\
