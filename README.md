@@ -49,18 +49,16 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
         --port=80 --labels app=flaskmicroservice
 ```
 
-## Directory Structure
+## Directory and file structure
 
-| Directory/File | Description |
-| ---- | ----------- |
-| `.circleci/config.yml` | CircleCI configuration |
-| `model_data` | Trained model data for housing prices in Boston |
-| `output_txt_files` | Docker and Kubernetes log output |
-| `app.py` | REST Endpoint for predicting housing prices in Boston |
-| `Dockerfile` | Dockerfile containing the application and its dependencies |
-| `make_prediction.sh` | Calls prediction REST endpoint and simulates sample prediction |
-| `Makefile` | Build file of the project |
-| `requirements.txt` | Python requirements |
-| `run_docker.sh` | Shell script for creating and running docker container |
-| `run_kubernetes.sh` | Shell script to deploy docker container on Kubernetes cluster |
-| `upload_docker.sh` | Shell script for uploading locally built docker image to dockerhub repository |
+- `.circleci/config.yml` CircleCI configuration file
+- `model_data` Trained model data
+- `output_txt_files` Docker and Kubernetes log output files
+- `app.py` API for predicting housing prices
+- `Dockerfile` Dockerfile containing the application and its dependencies installation
+- `make_prediction.sh` invokes prediction API to get the prediction
+- `Makefile` Makefile
+- `requirements.txt` Python requirements file
+- `run_docker.sh` sehll script for building and running docker container
+- `run_kubernetes.sh` shell script to deploy docker container on a Kubernetes cluster
+- `upload_docker.sh` shell script for uploading docker image to dockerhub repository
