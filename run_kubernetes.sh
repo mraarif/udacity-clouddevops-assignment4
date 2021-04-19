@@ -18,4 +18,4 @@ kubectl get pods
 
 
 # Forward the container port to a host
-kubectl port-forward flaskskearlndemo 8000:80
+kubectl port-forward flaskmicroservice 8000:80

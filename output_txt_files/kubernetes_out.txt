@@ -3,11 +3,12 @@
 Flag --generator has been deprecated, has no effect and will be removed in the future.
 Error from server (AlreadyExists): pods "flaskmicroservice" already exists
 NAME                          READY   STATUS    RESTARTS   AGE
-flaskmicroservice             1/1     Running   0          18m
-flaskskearlndemo              1/1     Running   0          37h
-hello-node-7567d9fdc9-sbj9r   1/1     Running   1          4d13h
+flaskmicroservice             1/1     Running   0          39m
+flaskskearlndemo              1/1     Running   0          39h
+hello-node-7567d9fdc9-sbj9r   1/1     Running   1          4d15h
 Forwarding from 127.0.0.1:8000 -> 80
 Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
 Handling connection for 8000
 
 
@@ -34,3 +35,23 @@ Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdo
   from ._gradient_boosting import predict_stages
  * Debugger is active!
  * Debugger PIN: 115-292-801
+[2021-04-19 10:54:01,312] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2021-04-19 10:54:01,460] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2021-04-19 10:54:01,473] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2021-04-19 10:54:01,492] INFO in app: output prediction: [20.35373177134412]
+127.0.0.1 - - [19/Apr/2021 10:54:01] "POST /predict HTTP/1.1" 200 -
+[2021-04-19 10:54:13,809] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2021-04-19 10:54:13,832] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2021-04-19 10:54:13,850] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2021-04-19 10:54:13,857] INFO in app: output prediction: [20.35373177134412]
+127.0.0.1 - - [19/Apr/2021 10:54:13] "POST /predict HTTP/1.1" 200 -
